@@ -51,29 +51,29 @@ console.log(globalVar);
 이제부터 하나씩 컨텍스트가 생성되는 과정을 보자.<br>
 먼저 어플리케이션이 실행될 떄 **전역 컨텍스트**가 생성된다.<br>
 전역 컨텍스트는 가장 바깥쪽에 존재하는 실행 컨텍스트이다.
-![context1](/assets/img/js/context1.png)
+![context1](./img/context/context1.png)
 <br>
 전역 컨텍스트가 생성되고나서 변수 및 함수의 **호이스팅**이 일어난후 순차적으로 실행한다.<br>
 함수(globalFunc)가 실행될 때, 새로운 컨텍스트(globalFunc)가 생성되고 `컨텍스트 스택`에 쌓인다.<br>
 그리고 생성된 컨텍스트(globalFunc)가 컨트롤(제어권)을 가진다.
-![context2](/assets/img/js/context2.png)
+![context2](./img/context/context2.png)
 <br>
 마찬가지로 함수 내부의 호이스팅이 일어나고 순차적으로 실행한다.<br>
 다른 함수(innerFunc)가 실행될 때, 실행중인 컨텍스트(globalFunc)가 잠시 중단되고 새로운 컨텍스트(innerFunc)가 생성된다.<br>
 그리고 생성된 컨텍스트(innerFunc)가 컨트롤(제어권)을 가진다.
-![context3](/assets/img/js/context3.png)
+![context3](./img/context/context3.png)
 <br>
 함수 내부가 순차적으로 실행된후 마지막 코드까지 실행을 완료하면 실행중인 컨텍스트(innerFunc)가 종료된다.<br>
 실행중인 컨텍스트(innerFunc)가 종료되면 이전에 실행중이던 컨텍스트(globalFunc)가 다시 컨트롤(제어권)을 가진다.<br>
 그리고 컨텍스트 스텍이서 해당 컨텍스트(innerFunc)를 꺼낸다.
-![context4](/assets/img/js/context4.png)
+![context4](./img/context/context4.png)
 <br>
 마찬가지로 마지막 코드까지 실행이 완료되면 실행중인 컨텍스트(globalFunc)가 종료된다.<br>
 그리고 컨텍스트 스텍이서 해당 컨텍스트(globalFunc)를 꺼낸다.
-![context5](/assets/img/js/context5.png)
+![context5](./img/context/context5.png)
 <br>
 전역 컨텍스트가 계속 실행되고, 어플리케이션이 종료될 때 전역 컨텍스트도 종료된다.
-![context6](/assets/img/js/context6.png)
+![context6](./img/context/context6.png)
 
 ---
 ## Reference
